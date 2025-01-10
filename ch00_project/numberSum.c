@@ -3,14 +3,20 @@
 // 2.
 // 3.출력 4+1+2=7
 
+
 int main() {
-    int num = 412;
+    int num;
+    printf("숫자를 입력: ");
+    scanf("%d", &num);  // Corrected scanf statement with the missing comma
+
     int total = 0;
 
-    while(num > 0) {
-        total += (num%10);
-        num /= 10;
+    while (num > 0) {
+        total += (num % 10);  // Extract the last digit and add it to total
+        num /= 10;  // Remove the last digit
     }
 
-    printf("총합:%d ",total);
+    printf("총합: %d\n", total);  // Print the total sum of digits
+
+    return 0;
 }
